@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .insta{
+            display: flex;
+            justify-content: space-around;
+            /* align-items: center; */
+            align-content: center;
+            margin: 40px 120px;
+        }
+        .img{
+            width: 50%;
+        }
+        img{
+            width: 100%;
+            /* height: 500px; */
+        }
+        .form img{
+            width: 170px;
+            height: 50px;
+            margin-left: 30px;
+        }
+        .form{
+            margin: 20px; 
+            position: relative;
+
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            height: 145px;
+            padding-top: 50px;
+
+        }
+        #pass{
+            border: none;
+            width: 202px;
+        }
+        #btn{
+            border: none;
+            padding: 14px 10px;
+            border-radius: 5px;
+
+        }
+        input{
+            width: 260px;
+            height: 42px;
+            background-color: #ECF3FF;
+            padding-left:5px ;
+            border-radius: 5px;
+
+        }
+
+        .int{
+            border: 1px solid black;
+            width: 260px;
+            border-radius: 5px;
+
+
+        }
+        #btnn{
+            width: 260px;
+            padding: 12px ;
+            margin-top: 30px;
+            border-radius: 5px;
+            position: absolute;
+            top: 200px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="insta">
+        <div class="img">
+            <img src="./landing-2x.webp" alt="">
+        </div>
+        <div class="form">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRM0LXLpPut10ImZ8U5ZNDgLSBLOkmB10gFYobeOzFMF97nFMPf " alt="">
+            <form action="" onsubmit="fname()">
+                <input id="uname" type="text" placeholder="username">
+                <div class="int">
+                    <input type="password" id="pass" placeholder="password" >
+                    <button type="button" id="btn" onclick="fn()">show</button>
+                </div>
+                <button id="btnn">Log in</button>
+
+            </form>
+
+        </div>
+        <script>
+            let uname =document.getElementById("uname")
+            let pass = document.getElementById("pass")
+            let btn = document.getElementById("btn")
+            function fn(){
+                if(btn.innerHTML=="show"){
+                    btn.innerHTML="Hide"
+                    pass.type="text"
+                }
+                else{
+                    btn.innerHTML="show"
+                    pass.type="password"
+                }
+            }
+            let username="usern"
+            let password="usern@123"
+            let btt = document.getElementById("btt")
+            function fname(){
+                if(uname.value==username && pass.value==password){
+                    document.write("Login successful")
+                }
+                else{
+                    // document.write("failed")
+                    ffname()
+                }
+            }
+            function ffname(){
+                if(btt.style.top==("200px")){
+                    btt.hover.top=("195px")
+                }
+                else{
+                    (btt.style.top=("200px"))
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
